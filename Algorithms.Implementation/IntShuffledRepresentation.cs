@@ -39,5 +39,16 @@ namespace Algorithms.Implementation
         {
             return number * (int)Math.Pow(10, position - 1);
         }
+ 
+        public int RecursiveSolution(int value)
+        {
+            int numberOfDigits = (int)Math.Floor(Math.Log10(value)) + 1;
+            if(numberOfDigits == 1 || numberOfDigits == 2) return value;
+            var powerOf10 = (int)Math.Pow(10, numberOfDigits - 1);
+            var numberWithoutOneDigit =  (value % powerOf10);
+            return value  - numberWithoutOneDigit +
+                  (value % 10 * powerOf10 / 10) +
+                  RecursiveSolution(numberWithoutOneDigit / 10);
+        }
     }
 }

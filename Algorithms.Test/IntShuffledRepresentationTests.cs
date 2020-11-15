@@ -16,6 +16,7 @@ namespace Algorithms.Test
         public void Should_Shuffle( int value, int solution)
         {
             sut.Solution(value).Should().Be(solution);
+            sut.RecursiveSolution(value).Should().Be(solution);
         }
     }
 }
