@@ -2,6 +2,18 @@
 
 namespace Algorithms.Implementation
 {
+    /*
+    Problem:
+    
+    Shuffle the digits of a number in the following way: write one digit from
+    the front of the number and one digit from the back, then the second
+    digit from the front and the second from the back, and so on until the
+    length of the shuffled number is the same as that of the original.
+    
+    For example given 123456 the function should return 162534.
+    
+    Assume that the number is an integer within the range [0 .. 1 000 000 000 ]
+    */
     public class IntShuffledRepresentation
     {
         public int Solution(int value)
